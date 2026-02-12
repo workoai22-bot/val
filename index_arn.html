@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best of Luck for 10th Grade!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            overflow: hidden;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .book {
+            position: absolute;
+            color: #8b4513;
+            font-size: 2em;
+            animation: float 6s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Best of Luck for Your 10th Grade Exams ARNAV!</h1>
+    <p>You've worked so hard, and I'm proud of you. Believe in yourself, stay focused, and ace those tests! You've got this! 📚✨</p>
+    <p>Remember: Hard work beats talent when talent doesn't work hard. Keep pushing! If you need study tips, check out <a href="https://www.khanacademy.org/" style="color: yellow;">Khan Academy</a>.</p>
+    
+    <!-- Floating books animation -->
+    <script>
+        function createBook() {
+            const book = document.createElement('div');
+            book.className = 'book';
+            book.innerHTML = '📖';
+            book.style.left = Math.random() * 100 + 'vw';
+            book.style.animationDelay = Math.random() * 6 + 's';
+            document.body.appendChild(book);
+            setTimeout(() => book.remove(), 6000);
+        }
+        setInterval(createBook, 800);
+    </script>
+</body>
+</html>
